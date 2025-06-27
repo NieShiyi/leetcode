@@ -1,9 +1,12 @@
 {
-  "version": "0.1.0",
-  "configurations": {
-    "name": "codes",
-    "program": "/Users/qt/program/codes",
-    "request": "launch",
-    "type": "node"
-  }
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Debug LeetCode",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    }
+  ]
 }
