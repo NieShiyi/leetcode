@@ -96,3 +96,9 @@ var mySqrt = function(x) {
 // @after-stub-for-debug-begin
 module.exports = mySqrt;
 // @after-stub-for-debug-end
+
+// 拓展：
+// 计算中间位置还可以使用，如果你确定不会出现浮点误差、溢出问题。
+// const mid = Math.floor((l + r) / 2);
+// 但是最稳妥的做法还是，原因是它防止了 l + r 在极大值时产生溢出（比如在 C++、Java 中），然 JavaScript 的 Number 是浮点数类型，不容易溢出，但这种写法依然是跨语言通用的最佳实践。
+// const mid = l + Math.floor((r - l) / 2);
