@@ -54,15 +54,17 @@
  * @param {number} n
  * @return {number}
  */
-// 官方解答：f(x)= f(x-1) + f(x-2) 
+// 官方解答：f(x)= f(x-1) + f(x-2)
 // 因为爬到最后一步要么需要走两步，要么需要走一步。所以走到倒数第二步的方案+走到倒数第一步的方案就是走到当前步方案
-var climbStairs = function(n) {
-    let p = 0, q = 0, r = 1;
-    for (let i = 1; i <= n; ++i) {
-        p = q;
-        q = r;
-        r = p + q;
-    }
-    return r;
+var climbStairs = function (n) {
+  let p = 0,
+    q = 0,
+    r = 1;
+  for (let i = 1; i <= n; ++i) {
+    p = q;
+    q = r;
+    r = p + q;
+  }
+  return r;
 };
 // @lc code=end
